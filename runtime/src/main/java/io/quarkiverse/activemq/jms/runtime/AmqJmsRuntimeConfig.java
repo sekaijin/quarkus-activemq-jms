@@ -1,0 +1,53 @@
+/*
+* Copyright 2020 the original author or authors.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+package io.quarkiverse.activemq.jms.runtime;
+
+import java.util.Optional;
+
+import io.quarkus.runtime.annotations.ConfigItem;
+import io.quarkus.runtime.annotations.ConfigPhase;
+import io.quarkus.runtime.annotations.ConfigRoot;
+
+@ConfigRoot(name = "activemq-jms", phase = ConfigPhase.RUN_TIME)
+public class AmqJmsRuntimeConfig {
+
+   public static final String DEFAULT_URL = "tcp://localhost:61616";
+
+    /**
+     * Connection URL for the factory
+     */
+    @ConfigItem(defaultValue = DEFAULT_URL)
+    public String url;
+
+    /**
+     * Username to optionally be set on the factory
+     */
+    @ConfigItem
+    public Optional<String> username;
+
+    /**
+     * Password to optionally be set on the factory
+     */
+    @ConfigItem
+    public Optional<String> password;
+
+    /**
+     * Whether to wrap a ConnectionFactory by ConnectionFactoryWrapper which could be introduced by other extensions,
+     * such as quarkus-pooled-jms to provide pooling capability
+     */
+    @ConfigItem(defaultValue = "false")
+    public boolean wrap;
+}

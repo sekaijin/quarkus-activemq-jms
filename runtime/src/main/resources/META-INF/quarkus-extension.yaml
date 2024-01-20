@@ -1,0 +1,13 @@
+---
+name: "AMQP 1.0 JMS client - Apache Qpid JMS"
+metadata:
+  keywords:
+  - "amqp"
+  - "qpid-jms"
+  - "qpid"
+  - "jms"
+  - "artemis"
+  guide: "https://quarkus.io/guides/jms"
+  categories:
+  - "messaging"
+  status: "stable"
