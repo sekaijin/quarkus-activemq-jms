@@ -1,13 +1,13 @@
 ---
-name: "AMQP 1.0 JMS client - Apache Qpid JMS"
+name: "Openwire 1.0 JMS client - Apache ActiveMQ JMS"
 metadata:
   keywords:
-  - "amqp"
-  - "qpid-jms"
-  - "qpid"
+  - "openwire"
+  - "amq-jms"
+  - "amq"
   - "jms"
-  - "artemis"
+  - "activemq"
   guide: "https://quarkus.io/guides/jms"
   categories:
   - "messaging"
-  status: "stable"
+  status: "experimental"
