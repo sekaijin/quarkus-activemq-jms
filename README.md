@@ -6,7 +6,7 @@ Use JMS APIs with Openwire 1.0 servers such as ActiveMQ 5 and more.
 
 ### Sample Usage
 
-See the [quarkus-activemq-jms-quickstart](https://github.com/amqphub/quarkus-qpid-jms-quickstart/) repository for sample application usage of the extension.
+See the [quarkus-activemq-jms-quickstart](https://github.com/amqphub/quarkus-activemq-jms-quickstart/) repository for sample application usage of the extension.
 
 ### Overview
 

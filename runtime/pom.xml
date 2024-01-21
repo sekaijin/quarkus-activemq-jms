@@ -40,20 +40,6 @@
   </dependencyManagement>
 
   <dependencies>
-<!--    <dependency>-->
-<!--      <groupId>org.apache.qpid</groupId>-->
-<!--      <artifactId>qpid-jms-client</artifactId>-->
-<!--      <exclusions>-->
-<!--        <exclusion>-->
-<!--          <groupId>io.netty</groupId>-->
-<!--          <artifactId>netty-transport-native-epoll</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>io.netty</groupId>-->
-<!--          <artifactId>netty-transport-native-kqueue</artifactId>-->
-<!--        </exclusion>-->
-<!--      </exclusions>-->
-<!--    </dependency>-->
 
       <dependency>
 	    <groupId>org.apache.activemq</groupId>

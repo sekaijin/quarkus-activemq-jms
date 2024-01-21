@@ -75,19 +75,19 @@ import java.util.Optional;
 import java.util.function.Function;
 
 public class AmqJmsProcessor {
-    private static final String QPID_JMS = "qpid-jms";
+    private static final String AMQ_JMS = "activemq-jms";
 
     private static final String GLOBAL_TRACER_CLASS = "io.opentracing.util.GlobalTracer";
 
     @BuildStep
     public void enableSecurityServices(BuildProducer<FeatureBuildItem> feature,
                                        BuildProducer<ExtensionSslNativeSupportBuildItem> extensionSslNativeSupport) {
-        feature.produce(new FeatureBuildItem(QPID_JMS));
+        feature.produce(new FeatureBuildItem(AMQ_JMS));
 
         // Indicates desire for the Native SSL support to be enabled. This actually flags the
         // --enable-all-security-services arg for Graal, enabling various other required bits
         // such as Mac that also allows getting some SASL mechanisms working below.
-        extensionSslNativeSupport.produce(new ExtensionSslNativeSupportBuildItem(QPID_JMS));
+        extensionSslNativeSupport.produce(new ExtensionSslNativeSupportBuildItem(AMQ_JMS));
     }
 
     @BuildStep
