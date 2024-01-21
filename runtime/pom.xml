@@ -25,7 +25,7 @@
 
   <artifactId>quarkus-activemq-jms</artifactId>
   <name>Quarkus activemq JMS</name>
-  <description>Use JMS APIs with AMQP 1.0 servers such as ActiveMQ Artemis, ActiveMQ 5, activemq Broker-J, activemq Dispatch router, Azure Service Bus, and more</description>
+  <description>Extension enabling use of the AMQP 1.0 activemq JMS client in a Quarkus application</description>
 
   <dependencyManagement>
     <dependencies>

@@ -40,6 +40,11 @@
 
   <dependencies>
     <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-junit5-internal</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>io.quarkiverse.activemq-jms</groupId>
       <artifactId>quarkus-activemq-jms</artifactId>
     </dependency>

@@ -1,0 +1,5 @@
+name: quarkus-activemq-jms
+title: Activemq Jms
+version: dev
+nav:
+  - modules/ROOT/nav.adoc

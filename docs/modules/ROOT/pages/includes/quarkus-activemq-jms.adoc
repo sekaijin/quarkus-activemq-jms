@@ -1,0 +1,80 @@
+
+:summaryTableId: quarkus-activemq-jms
+[.configuration-legend]
+icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
+[.configuration-reference.searchable, cols="80,.^10,.^10"]
+|===
+
+h|[[quarkus-activemq-jms_configuration]]link:#quarkus-activemq-jms_configuration[Configuration property]
+
+h|Type
+h|Default
+
+a| [[quarkus-activemq-jms_quarkus.activemq-jms.url]]`link:#quarkus-activemq-jms_quarkus.activemq-jms.url[quarkus.activemq-jms.url]`
+
+
+[.description]
+--
+Connection URL for the factory
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_ACTIVEMQ_JMS_URL+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_ACTIVEMQ_JMS_URL+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|`tcp://localhost:61616`
+
+
+a| [[quarkus-activemq-jms_quarkus.activemq-jms.username]]`link:#quarkus-activemq-jms_quarkus.activemq-jms.username[quarkus.activemq-jms.username]`
+
+
+[.description]
+--
+Username to optionally be set on the factory
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_ACTIVEMQ_JMS_USERNAME+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_ACTIVEMQ_JMS_USERNAME+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|
+
+
+a| [[quarkus-activemq-jms_quarkus.activemq-jms.password]]`link:#quarkus-activemq-jms_quarkus.activemq-jms.password[quarkus.activemq-jms.password]`
+
+
+[.description]
+--
+Password to optionally be set on the factory
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_ACTIVEMQ_JMS_PASSWORD+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_ACTIVEMQ_JMS_PASSWORD+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|
+
+
+a| [[quarkus-activemq-jms_quarkus.activemq-jms.wrap]]`link:#quarkus-activemq-jms_quarkus.activemq-jms.wrap[quarkus.activemq-jms.wrap]`
+
+
+[.description]
+--
+Whether to wrap a ConnectionFactory by ConnectionFactoryWrapper which could be introduced by other extensions, such as quarkus-pooled-jms to provide pooling capability
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_ACTIVEMQ_JMS_WRAP+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_ACTIVEMQ_JMS_WRAP+++`
+endif::add-copy-button-to-env-var[]
+--|boolean 
+|`false`
+
+|===
