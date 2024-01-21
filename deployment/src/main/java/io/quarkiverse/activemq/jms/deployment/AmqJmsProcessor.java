@@ -121,12 +121,12 @@ public class AmqJmsProcessor {
 //        delayedInitialisation.produce(new RuntimeInitializedClassBuildItem(TransportImpl.class.getName()));
 
         // Provider impls
-        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/amqp"));
-        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/amqps"));
-        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/amqpws"));
-        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/amqpwss"));
-        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/redirects/ws"));
-        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/redirects/wss"));
+//        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/amqp"));
+//        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/amqps"));
+//        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/amqpws"));
+//        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/amqpwss"));
+//        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/redirects/ws"));
+//        resource.produce(new NativeImageResourceBuildItem("META-INF/services/org/apache/qpid/jms/provider/redirects/wss"));
 //        reflectiveClass.produce(ReflectiveClassBuildItem.builder(AmqpProviderFactory.class).methods().build());
 //        reflectiveClass.produce(ReflectiveClassBuildItem.builder(AmqpProvider.class).methods().build());
 
