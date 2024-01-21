@@ -20,11 +20,12 @@
   <parent>
     <groupId>io.quarkiverse.activemq-jms</groupId>
     <artifactId>quarkus-activemq-jms-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>2.6.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>quarkus-activemq-jms-deployment</artifactId>
-  <name>Quarkus activemq JMS - Deployment</name>
+  <artifactId>quarkus-activemq-jms</artifactId>
+  <name>Quarkus activemq JMS</name>
+  <description>Use JMS APIs with AMQP 1.0 servers such as ActiveMQ Artemis, ActiveMQ 5, activemq Broker-J, activemq Dispatch router, Azure Service Bus, and more</description>
 
   <dependencyManagement>
     <dependencies>
@@ -39,37 +40,69 @@
   </dependencyManagement>
 
   <dependencies>
+
+      <dependency>
+	    <groupId>org.apache.activemq</groupId>
+	    <artifactId>activemq-client</artifactId>
+      </dependency>
+
     <dependency>
-      <groupId>io.quarkiverse.activemq-jms</groupId>
-      <artifactId>quarkus-activemq-jms</artifactId>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-core</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-arc</artifactId>
     </dependency>
 
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-core-deployment</artifactId>
+      <artifactId>quarkus-netty</artifactId>
     </dependency>
+
+    <!-- Normally a provided dependency, but its needed for graal static analysis -->
     <dependency>
-        <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-arc-deployment</artifactId>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-handler-proxy</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>io.netty</groupId>
+          <artifactId>netty-codec-socks</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-jms-spi-deployment</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-netty-deployment</artifactId>
-    </dependency>
-    <!-- Needed because quarkus-netty[-deployment] needs it present if netty-codec-http 
+
+    <!-- Needed because quarkus-netty needs it present if netty-codec-http 
       is already present on the classpath, which it is for client -->
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-codec-http2</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>org.graalvm.sdk</groupId>
+      <artifactId>graal-sdk</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-extension-maven-plugin</artifactId>
+        <version>${quarkus-version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>extension-descriptor</goal>
+            </goals>
+            <configuration>
+              <deployment>${project.groupId}:${project.artifactId}-deployment:${project.version}</deployment>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
